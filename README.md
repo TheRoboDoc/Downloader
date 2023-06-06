@@ -1,5 +1,5 @@
 # Downloader
-A simple video downloader using [yt-dlp](https://github.com/yt-dlp/yt-dlp). Mostly acting as a UI end for [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+A simple video downloader using [yt-dlp](https://github.com/yt-dlp/yt-dlp). Mostly acting as a UI end for [yt-dlp](https://github.com/yt-dlp/yt-dlp).It can download youtube, twitter, instagram, and with luck many other websites videos using a direct link
 
 ## Install
 1. Download zip file by clicking **[here](https://github.com/TheRoboDoc/Downloader/releases/download/Releases/RobosDownloader1.0.0.zip)** or going into the released tab
