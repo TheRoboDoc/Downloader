@@ -6,7 +6,7 @@ A simple video downloader using [yt-dlp](https://github.com/yt-dlp/yt-dlp). Most
 2. Unzip the zip file
 
 ## How to run
-RobosDownloader1.0.0 -> Run Downloader
+RobosDownloader1.0.1 -> Run Downloader
 
 ## How it looks
 ![Downloader Window](https://cdn.discordapp.com/attachments/1096788658566209546/1115652339588661338/image.png)
