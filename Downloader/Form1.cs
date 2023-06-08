@@ -10,7 +10,7 @@ namespace Downloader
             InitializeComponent();
         }
 
-        public string path = "C:\\";
+        public string path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads";
 
         private void Exit_Click(object sender, EventArgs e)
         {
@@ -69,6 +69,14 @@ namespace Downloader
 
             _ = Task.Run(async () =>
             {
+                if (path != FileLocation.Text)
+                {
+                    BeginInvoke(new Action(() =>
+                    {
+                        consoleOutputbox.AppendText("File path invalid or empty. Downloading to Downloads folder" + Environment.NewLine);
+                    }));
+                }
+
                 ProcessStartInfo ytdlpStartInfo = new ProcessStartInfo()
                 {
                     FileName = Application.StartupPath + "yt-dlp.exe",
