@@ -1,5 +1,3 @@
-using static System.Net.WebRequestMethods;
-
 namespace Downloader
 {
     internal static class Program
