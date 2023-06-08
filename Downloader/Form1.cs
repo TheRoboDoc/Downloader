@@ -100,8 +100,14 @@ namespace Downloader
                 ytdlp.BeginOutputReadLine();
                 ytdlp.BeginErrorReadLine();
 
+                Application.ApplicationExit += Application_ApplicationExit;
+
                 await ytdlp.WaitForExitAsync();
 
+                Application.ApplicationExit -= Application_ApplicationExit;
+
+                if(openExplorer)
+                {
                 BeginInvoke(new Action(() =>
                 {
                     consoleOutputbox.AppendText($"Download completed, file can be found at {path}" + Environment.NewLine);
@@ -115,7 +121,15 @@ namespace Downloader
                 };
 
                 Process.Start(explorerStartInfo);
+                }
             });
+        }
+
+        private bool openExplorer = true;
+
+        private void Application_ApplicationExit(object? sender, EventArgs e)
+        {
+            openExplorer = false;
         }
 
         private void Ytdlp_OutputDataReceived(object sender, DataReceivedEventArgs e)
