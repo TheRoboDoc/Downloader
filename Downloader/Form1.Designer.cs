@@ -34,6 +34,7 @@
             Minimise = new Button();
             Exit = new Button();
             panel2 = new Panel();
+            checkBox1 = new CheckBox();
             FileDialogButton = new Button();
             Formatlable = new Label();
             FilelocationLable = new Label();
@@ -120,6 +121,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(71, 78, 104);
+            panel2.Controls.Add(checkBox1);
             panel2.Controls.Add(FileDialogButton);
             panel2.Controls.Add(Formatlable);
             panel2.Controls.Add(FilelocationLable);
@@ -132,6 +134,27 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(412, 428);
             panel2.TabIndex = 1;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.BackColor = Color.FromArgb(71, 78, 104);
+            checkBox1.Checked = true;
+            checkBox1.CheckState = CheckState.Checked;
+            checkBox1.FlatAppearance.BorderSize = 0;
+            checkBox1.FlatAppearance.CheckedBackColor = Color.FromArgb(80, 87, 122);
+            checkBox1.FlatAppearance.MouseDownBackColor = Color.FromArgb(64, 66, 88);
+            checkBox1.FlatAppearance.MouseOverBackColor = Color.FromArgb(107, 114, 142);
+            checkBox1.FlatStyle = FlatStyle.Flat;
+            checkBox1.Font = new Font("Arial", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox1.ForeColor = Color.White;
+            checkBox1.Location = new Point(148, 141);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(141, 18);
+            checkBox1.TabIndex = 7;
+            checkBox1.Text = "Open Folder When Done";
+            checkBox1.UseVisualStyleBackColor = false;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // FileDialogButton
             // 
@@ -321,5 +344,6 @@
         private RichTextBox consoleOutputbox;
         private PictureBox pictureBox2;
         private Label label1;
+        private CheckBox checkBox1;
     }
 }

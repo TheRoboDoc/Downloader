@@ -82,7 +82,7 @@ namespace Downloader
             {
                 if (path != FileLocation.Text)
                 {
-                    BeginInvoke(new Action(() =>
+                    BeginInvoke(new Action(() => //Have to do these otherwise get cross thread access violations
                     {
                         consoleOutputbox.AppendText("File path invalid or empty. Downloading to Downloads folder" + Environment.NewLine);
                     }));
@@ -157,6 +157,7 @@ namespace Downloader
             BeginInvoke(new Action(() =>
             {
                 consoleOutputbox.AppendText(e.Data + Environment.NewLine);
+                consoleOutputbox.ScrollToCaret();
             }));
         }
 
@@ -199,6 +200,18 @@ namespace Downloader
             if (e.Button == MouseButtons.Left)
             {
                 isMoving = false;
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                openExplorer = true;
+            }
+            else if (!checkBox1.Checked)
+            {
+                openExplorer = false;
             }
         }
     }
