@@ -38,6 +38,17 @@ namespace Downloader
 
         private void StartDownload_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(LinkInput.Text))
+            {
+                WaitingText.Text = "URL Field Empty";
+                WaitingText.ForeColor = Color.Red;
+                return;
+            }
+            else
+            {
+                WaitingText.ForeColor = Color.White;
+            }
+
             StartDownload.Enabled = false;
 
             this.pictureBox1.Image = Resources.RobitThink;
@@ -106,7 +117,7 @@ namespace Downloader
 
                 Application.ApplicationExit -= Application_ApplicationExit;
 
-                if(openExplorer)
+                if (openExplorer)
                 {
                     BeginInvoke(new Action(() =>
                     {

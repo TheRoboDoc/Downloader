@@ -252,12 +252,13 @@
             // 
             // WaitingText
             // 
-            WaitingText.AutoSize = true;
+            WaitingText.Anchor = AnchorStyles.None;
+            WaitingText.AutoEllipsis = true;
             WaitingText.Font = new Font("Arial", 34F, FontStyle.Regular, GraphicsUnit.Point);
             WaitingText.ForeColor = Color.White;
-            WaitingText.Location = new Point(464, 166);
+            WaitingText.Location = new Point(409, 166);
             WaitingText.Name = "WaitingText";
-            WaitingText.Size = new Size(273, 52);
+            WaitingText.Size = new Size(392, 52);
             WaitingText.TabIndex = 7;
             WaitingText.Text = "Standing By";
             WaitingText.TextAlign = ContentAlignment.MiddleCenter;
@@ -298,7 +299,6 @@
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
