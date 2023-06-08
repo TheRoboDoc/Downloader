@@ -117,11 +117,15 @@ namespace Downloader
 
                 Application.ApplicationExit -= Application_ApplicationExit;
 
+                BeginInvoke(new Action(() =>
+                {
+                    consoleOutputbox.AppendText($"Download completed, file can be found at {path}" + Environment.NewLine);
+                }));
+
                 if (openExplorer)
                 {
                     BeginInvoke(new Action(() =>
                     {
-                        consoleOutputbox.AppendText($"Download completed, file can be found at {path}" + Environment.NewLine);
                         consoleOutputbox.AppendText("Opening..." + Environment.NewLine);
                     }));
 
