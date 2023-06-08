@@ -9,4 +9,4 @@ A simple video downloader using [yt-dlp](https://github.com/yt-dlp/yt-dlp). Most
 RobosDownloader1.0.1 -> Run Downloader
 
 ## How it looks
-![Downloader Window](https://cdn.discordapp.com/attachments/1096788658566209546/1115652339588661338/image.png)
+![Downloader Window](https://cdn.discordapp.com/attachments/813575157255766046/1116336406923575397/image.png)
