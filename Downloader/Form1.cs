@@ -108,19 +108,19 @@ namespace Downloader
 
                 if(openExplorer)
                 {
-                BeginInvoke(new Action(() =>
-                {
-                    consoleOutputbox.AppendText($"Download completed, file can be found at {path}" + Environment.NewLine);
-                    consoleOutputbox.AppendText("Opening..." + Environment.NewLine);
-                }));
+                    BeginInvoke(new Action(() =>
+                    {
+                        consoleOutputbox.AppendText($"Download completed, file can be found at {path}" + Environment.NewLine);
+                        consoleOutputbox.AppendText("Opening..." + Environment.NewLine);
+                    }));
 
-                ProcessStartInfo explorerStartInfo = new ProcessStartInfo()
-                {
-                    FileName = "explorer.exe",
-                    Arguments = path
-                };
+                    ProcessStartInfo explorerStartInfo = new ProcessStartInfo()
+                    {
+                        FileName = "explorer.exe",
+                        Arguments = path
+                    };
 
-                Process.Start(explorerStartInfo);
+                    Process.Start(explorerStartInfo);
                 }
             });
         }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label1 = new Label();
+            pictureBox2 = new PictureBox();
             Minimise = new Button();
             Exit = new Button();
             panel2 = new Panel();
@@ -44,12 +46,10 @@
             pictureBox1 = new PictureBox();
             WaitingText = new Label();
             consoleOutputbox = new RichTextBox();
-            pictureBox2 = new PictureBox();
-            label1 = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -66,6 +66,26 @@
             panel1.MouseDown += panel1_MouseDown;
             panel1.MouseMove += panel1_MouseMove;
             panel1.MouseUp += panel1_MouseUp;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(45, 13);
+            label1.Name = "label1";
+            label1.Size = new Size(182, 23);
+            label1.TabIndex = 4;
+            label1.Text = "Robo's Downloader";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.Robo_Meme_The_boissma;
+            pictureBox2.Location = new Point(15, 8);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(36, 36);
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
             // 
             // Minimise
             // 
@@ -165,10 +185,10 @@
             // 
             // StartDownload
             // 
-            StartDownload.BackColor = Color.FromArgb(80, 87, 122);
+            StartDownload.BackColor = Color.Red;
             StartDownload.FlatAppearance.BorderSize = 0;
-            StartDownload.FlatAppearance.MouseDownBackColor = Color.FromArgb(64, 66, 88);
-            StartDownload.FlatAppearance.MouseOverBackColor = Color.FromArgb(107, 114, 142);
+            StartDownload.FlatAppearance.MouseDownBackColor = Color.DarkRed;
+            StartDownload.FlatAppearance.MouseOverBackColor = Color.Salmon;
             StartDownload.FlatStyle = FlatStyle.Flat;
             StartDownload.Font = new Font("Arial", 25F, FontStyle.Regular, GraphicsUnit.Point);
             StartDownload.ForeColor = Color.White;
@@ -250,29 +270,10 @@
             consoleOutputbox.ForeColor = Color.White;
             consoleOutputbox.Location = new Point(422, 221);
             consoleOutputbox.Name = "consoleOutputbox";
+            consoleOutputbox.ReadOnly = true;
             consoleOutputbox.Size = new Size(366, 146);
             consoleOutputbox.TabIndex = 8;
             consoleOutputbox.Text = "";
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.Robo_Meme_The_boissma;
-            pictureBox2.Location = new Point(15, 8);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(36, 36);
-            pictureBox2.TabIndex = 3;
-            pictureBox2.TabStop = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(45, 13);
-            label1.Name = "label1";
-            label1.Size = new Size(182, 23);
-            label1.TabIndex = 4;
-            label1.Text = "Robo's Downloader";
             // 
             // MainWindow
             // 
@@ -292,10 +293,10 @@
             Text = "Downloader";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
